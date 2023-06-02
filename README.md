@@ -14,6 +14,8 @@ Skeinforge (далее СФ) содержит большое количеств�
 ![image](https://github.com/Zysperro/SkeinForgeAnalysis/assets/110100353/63a9bc21-3688-4757-84e6-ce682c0df866)
 ![image](https://github.com/Zysperro/SkeinForgeAnalysis/assets/110100353/d5d325ed-46f4-4fdc-9ff7-5b79ae0da01c)
 
+> <sub>Полученный gcode файл - в репозитории (3DBenchy_export.gcode)</sub>
+
 Основные инструменты программы для слайсинга находятся в папке skeinforge_plugins/craft_plugins, рассмотрим в параметрах профиля порядок создания gcode модели, мы рассматриваем печать 3Д принтеорм, поэтому заглянем в модуль extrusion.py в profile_plugins:
 ![image](https://github.com/Zysperro/SkeinForgeAnalysis/assets/110100353/3a45b6fc-d579-41c7-bd88-132bf8022eb6)
 

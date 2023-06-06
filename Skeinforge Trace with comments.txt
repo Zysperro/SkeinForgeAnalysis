@@ -4,10 +4,10 @@
       `- 217.585 mainloop  Tkinter.py:1123
             [34 frames hidden]  Tkinter, ..
                211.832 __call__  Tkinter.py:1532
-			   Запуск слайсинга:
+		Р—Р°РїСѓСЃРє СЃР»Р°Р№СЃРёРЅРіР°:
                `- 211.445 execute  fabmetheus_utilities\settings.py:1168
                   `- 210.098 execute  skeinforge.py:313
-				  Далее, как и описал в Readme, запускаются модули по порядку (Export, Carve, Fill, Inset и т.д.):
+		Р”Р°Р»РµРµ, РєР°Рє Рё РѕРїРёСЃР°Р» РІ Readme, Р·Р°РїСѓСЃРєР°СЋС‚СЃСЏ РјРѕРґСѓР»Рё РїРѕ РїРѕСЂСЏРґРєСѓ (Export, Carve, Fill, Inset Рё С‚.Рґ.):
                      `- 210.096 writeOutput  skeinforge_utilities\skeinforge_craft.py:133
                         `- 210.096 writeOutput  skeinforge_plugins\craft_plugins\export.py:262
                            |- 205.591 getChainTextFromProcedures  skeinforge_utilities\skeinforge_craft.py:40

@@ -1,0 +1,118 @@
+217.738 <module>  skeinforge.py:215
+`- 217.738 main  skeinforge.py:328
+   `- 217.736 startMainLoopFromConstructor  fabmetheus_utilities\settings.py:587
+      `- 217.585 mainloop  Tkinter.py:1123
+            [34 frames hidden]  Tkinter, ..
+               211.832 __call__  Tkinter.py:1532
+               `- 211.445 execute  fabmetheus_utilities\settings.py:1168
+                  `- 210.098 execute  skeinforge.py:313
+                     `- 210.096 writeOutput  skeinforge_utilities\skeinforge_craft.py:133
+                        `- 210.096 writeOutput  skeinforge_plugins\craft_plugins\export.py:262
+                           |- 205.591 getChainTextFromProcedures  skeinforge_utilities\skeinforge_craft.py:40
+                           |  |- 112.654 getCraftedText  skeinforge_plugins\craft_plugins\carve.py:121
+                           |  |  |- 108.302 getCarvedSVG  skeinforge_plugins\craft_plugins\carve.py:190
+                           |  |  |  `- 108.106 getCarveBoundaryLayers  fabmetheus_utilities\geometry\solids\triangle_mesh.py:807
+                           |  |  |     `- 107.775 getLoopsFromMesh  fabmetheus_utilities\geometry\solids\triangle_mesh.py:849
+                           |  |  |        |- 88.245 getLoopsFromCorrectMesh  fabmetheus_utilities\geometry\solids\triangle_mesh.py:428
+                           |  |  |        |  |- 76.934 isLoopListIntersecting  fabmetheus_utilities\euclidean.py:1789
+                           |  |  |        |  |  `- 76.934 isLoopIntersectingLoops  fabmetheus_utilities\euclidean.py:1780
+                           |  |  |        |  |     `- 76.838 isLineIntersectingLoops  fabmetheus_utilities\euclidean.py:1748
+                           |  |  |        |  |        `- 76.527 isLoopListIntersectingInsideXSegment  fabmetheus_utilities\euclidean.py:1797
+                           |  |  |        |  |           `- 75.934 isLoopIntersectingInsideXSegment  fabmetheus_utilities\euclidean.py:1761
+                           |  |  |        |  |              |- 33.066 isLineIntersectingInsideXSegment  fabmetheus_utilities\euclidean.py:1726
+                           |  |  |        |  |              |  |- 18.246 [self]
+                           |  |  |        |  |              |  `- 14.798 getXIntersectionIfExists  fabmetheus_utilities\euclidean.py:1680
+                           |  |  |        |  |              |- 24.182 [self]
+                           |  |  |        |  |              |- 14.898 getRotatedComplexes  fabmetheus_utilities\euclidean.py:1432
+                           |  |  |        |  |              |  |- 9.701 [self]
+                           |  |  |        |  |              |  `- 5.197 append  ..\<built-in>:0
+                           |  |  |        |  |              |        [2 frames hidden]  ..
+                           |  |  |        |  |              `- 3.789 len  ..\<built-in>:0
+                           |  |  |        |  |                    [2 frames hidden]  ..
+                           |  |  |        |  `- 10.588 getRemainingEdgeTable  fabmetheus_utilities\geometry\solids\triangle_mesh.py:559
+                           |  |  |        |     `- 10.355 [self]
+                           |  |  |        `- 18.242 setEdgesForAllFaces  fabmetheus_utilities\geometry\solids\triangle_mesh.py:908
+                           |  |  |           |- 9.645 setEdgeIndexesToVertexIndexes  fabmetheus_utilities\geometry\geometry_tools\face.py:152
+                           |  |  |           |  `- 7.083 [self]
+                           |  |  |           `- 8.597 [self]
+                           |  |  `- 4.350 getCarving  fabmetheus_utilities\svg_writer.py:33
+                           |  |     `- 4.344 getCarving  fabmetheus_utilities\fabmetheus_tools\interpret_plugins\stl.py:60
+                           |  |        `- 4.293 addFacesGivenBinary  fabmetheus_utilities\fabmetheus_tools\interpret_plugins\stl.py:35
+                           |  |           `- 3.000 addFacesGivenVertexes  fabmetheus_utilities\fabmetheus_tools\interpret_plugins\stl.py:55
+                           |  |              `- 2.921 getFaceGivenLines  fabmetheus_utilities\fabmetheus_tools\interpret_plugins\stl.py:78
+                           |  |- 44.708 getCraftedText  skeinforge_plugins\craft_plugins\fill.py:420
+                           |  |  `- 44.708 getCraftedTextFromText  skeinforge_plugins\craft_plugins\fill.py:424
+                           |  |     `- 44.699 getCraftedGcode  skeinforge_plugins\craft_plugins\fill.py:1119
+                           |  |        `- 44.034 addFill  skeinforge_plugins\craft_plugins\fill.py:850
+                           |  |           |- 9.218 removeEndpoints  skeinforge_plugins\craft_plugins\fill.py:747
+                           |  |           |  |- 6.789 isPointAddedAroundClosest  skeinforge_plugins\craft_plugins\fill.py:631
+                           |  |           |  |  `- 2.778 isAddedPointOnPathFree  skeinforge_plugins\craft_plugins\fill.py:571
+                           |  |           |  `- 2.418 remove  ..\<built-in>:0
+                           |  |           |        [2 frames hidden]  ..
+                           |  |           |- 7.863 addRotatedCarve  skeinforge_plugins\craft_plugins\fill.py:1069
+                           |  |           |  `- 7.849 getInsetSeparateLoopsFromAroundLoops  fabmetheus_utilities\intercircle.py:361
+                           |  |           |     `- 5.345 getCentersFromPoints  fabmetheus_utilities\intercircle.py:251
+                           |  |           |        `- 5.079 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |           |           `- 4.092 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |           |              `- 2.389 isWithinCircles  fabmetheus_utilities\intercircle.py:694
+                           |  |           |- 7.849 createFillForSurroundings  skeinforge_plugins\craft_plugins\fill.py:395
+                           |  |           |  `- 7.849 createExtraFillLoops  skeinforge_plugins\craft_plugins\fill.py:383
+                           |  |           |     `- 7.662 getInsetSeparateLoopsFromAroundLoops  fabmetheus_utilities\intercircle.py:361
+                           |  |           |        `- 5.230 getCentersFromPoints  fabmetheus_utilities\intercircle.py:251
+                           |  |           |           `- 4.704 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |           |              `- 3.649 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |           |- 7.413 getInfillDictionary  fabmetheus_utilities\geometry\solids\triangle_mesh.py:372
+                           |  |           |  `- 4.221 getCentersFromPoints  fabmetheus_utilities\intercircle.py:251
+                           |  |           |     `- 3.790 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |           |        `- 2.919 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |           `- 5.334 getPathsFromEndpoints  fabmetheus_utilities\euclidean.py:1330
+                           |  |- 30.102 getCraftedText  skeinforge_plugins\craft_plugins\inset.py:173
+                           |  |  `- 30.102 getCraftedTextFromText  skeinforge_plugins\craft_plugins\inset.py:177
+                           |  |     `- 30.098 getCraftedGcode  skeinforge_plugins\craft_plugins\inset.py:410
+                           |  |        `- 30.076 parseLine  skeinforge_plugins\craft_plugins\inset.py:442
+                           |  |           `- 29.817 addInset  skeinforge_plugins\craft_plugins\inset.py:397
+                           |  |              |- 15.170 addGcodeFromRemainingLoop  skeinforge_plugins\craft_plugins\inset.py:372
+                           |  |              |  |- 8.513 addGcodePerimeterBlockFromRemainingLoop  skeinforge_plugins\craft_plugins\inset.py:380
+                           |  |              |  |  `- 5.034 addAlreadyFilledArounds  skeinforge_plugins\craft_plugins\inset.py:92
+                           |  |              |  |     `- 3.458 getCentersFromLoop  fabmetheus_utilities\intercircle.py:241
+                           |  |              |  |        `- 3.138 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |              |  |           `- 2.295 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |              |  `- 6.473 getLargestCenterOutsetLoopFromLoopRegardless  fabmetheus_utilities\intercircle.py:407
+                           |  |              |     `- 6.470 getLargestCenterOutsetLoopFromLoop  fabmetheus_utilities\intercircle.py:384
+                           |  |              |        `- 4.170 getCentersFromPoints  fabmetheus_utilities\intercircle.py:251
+                           |  |              |           `- 3.829 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |              |              `- 2.792 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |              |- 8.393 getBridgeDirection  skeinforge_plugins\craft_plugins\inset.py:158
+                           |  |              |  `- 6.474 getInsetLoopsFromLoops  fabmetheus_utilities\intercircle.py:332
+                           |  |              |     `- 6.473 getInsetLoopsFromLoop  fabmetheus_utilities\intercircle.py:315
+                           |  |              |        `- 6.439 getAroundsFromLoop  fabmetheus_utilities\intercircle.py:177
+                           |  |              |           `- 6.395 getAroundsFromPoints  fabmetheus_utilities\intercircle.py:208
+                           |  |              |              `- 4.626 getCentersFromPoints  fabmetheus_utilities\intercircle.py:251
+                           |  |              |                 `- 4.295 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |              |                    `- 3.207 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |              `- 6.244 getInsetLoopsFromLoops  fabmetheus_utilities\intercircle.py:332
+                           |  |                 `- 6.243 getInsetLoopsFromLoop  fabmetheus_utilities\intercircle.py:315
+                           |  |                    `- 6.205 getAroundsFromLoop  fabmetheus_utilities\intercircle.py:177
+                           |  |                       `- 6.156 getAroundsFromPoints  fabmetheus_utilities\intercircle.py:208
+                           |  |                          `- 4.371 getCentersFromPoints  fabmetheus_utilities\intercircle.py:251
+                           |  |                             `- 4.033 getCentersFromCircleNodes  fabmetheus_utilities\intercircle.py:219
+                           |  |                                `- 2.937 getCircleIntersectionsFromCircleNodes  fabmetheus_utilities\intercircle.py:266
+                           |  |- 5.074 getCraftedText  skeinforge_plugins\craft_plugins\clip.py:65
+                           |  |  `- 5.074 getCraftedTextFromText  skeinforge_plugins\craft_plugins\clip.py:69
+                           |  |     `- 5.070 getCraftedGcode  skeinforge_plugins\craft_plugins\clip.py:183
+                           |  |        `- 5.020 parseLine  skeinforge_plugins\craft_plugins\clip.py:269
+                           |  |           `- 2.234 setLayerPixelTable  skeinforge_plugins\craft_plugins\clip.py:297
+                           |  |- 3.667 getCraftedText  skeinforge_plugins\craft_plugins\cool.py:114
+                           |  |  `- 3.667 getCraftedTextFromText  skeinforge_plugins\craft_plugins\cool.py:118
+                           |  |     `- 3.663 getCraftedGcode  skeinforge_plugins\craft_plugins\cool.py:251
+                           |  |        `- 2.602 parseLine  skeinforge_plugins\craft_plugins\cool.py:343
+                           |  `- 3.610 getCraftedText  skeinforge_plugins\craft_plugins\raft.py:224
+                           |     `- 3.610 getCraftedTextFromText  skeinforge_plugins\craft_plugins\raft.py:228
+                           |        `- 3.606 getCraftedGcode  skeinforge_plugins\craft_plugins\raft.py:809
+                           `- 2.876 writeOutput  skeinforge_utilities\skeinforge_analyze.py:37
+
+
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 01:06:14  Samples:  13
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 227.153
+/   _/                      v3.2.0
